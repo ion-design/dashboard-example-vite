@@ -52,7 +52,7 @@
                 <Button
                   iconLeading={<CurrencyDollar size={16} weight={"bold"} />}
                   variant="filled"
-                  color="primary"
+                  color="neutral"  // Changed from "primary" to "neutral"
                   size="md"
                   onClick={buyClickHandler}
                 >
