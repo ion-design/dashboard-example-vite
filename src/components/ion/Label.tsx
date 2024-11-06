@@ -1,6 +1,6 @@
-// Generated with Ion on 11/5/2024, 12:43:53 PM
+// Generated with Ion on 11/5/2024, 7:52:14 PM
 // Figma Link: https://www.figma.com/design/BsgE00bYWTmwm4RY0WmYN6?node-id=423:1459
-// ion/Label: Generated with Ion on 11/5/2024, 12:43:47 PM
+// ion/Label: Generated with Ion on 11/5/2024, 7:52:09 PM
 import * as LabelPrimitive from "@radix-ui/react-label";
 import { cva } from "class-variance-authority";
 import clsx from "clsx";
