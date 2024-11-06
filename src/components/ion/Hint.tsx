@@ -1,6 +1,6 @@
-// Generated with Ion on 11/5/2024, 12:43:53 PM
+// Generated with Ion on 11/6/2024, 8:39:48 AM
 // Figma Link: https://www.figma.com/design/BsgE00bYWTmwm4RY0WmYN6?node-id=423:1500
-// ion/Hint: Generated with Ion on 11/5/2024, 12:43:47 PM
+// ion/Hint: Generated with Ion on 11/6/2024, 8:39:43 AM
 import { Info } from "@phosphor-icons/react/dist/ssr";
 import clsx from "clsx";
 
