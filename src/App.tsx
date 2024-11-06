@@ -1,15 +1,15 @@
-
 import React, { ReactElement } from 'react'
-import { Routes, Route } from 'react-router-dom';
-import Generation from './Generation';
+    import { Routes, Route } from 'react-router-dom';
+    import Generation from './Generation';
+    import BuyExample from './components/ion/BuyExample';
 
+    function App(): ReactElement {
+      return (
+        <Routes>
+          <Route path="/" element={<Generation />} />
+          <Route path="/buy" element={<BuyExample />} />
+        </Routes>
+      )
+    }
 
-function App(): ReactElement {
-  return (
-     <Routes>
-        <Route path="/" element={<Generation  />} />
-     </Routes>
-  )
-}
-
-export default App;
+    export default App;
