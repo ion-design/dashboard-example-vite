@@ -1,6 +1,6 @@
-// Generated with Ion on 11/5/2024, 12:43:53 PM
+// Generated with Ion on 11/5/2024, 7:37:26 PM
 // Figma Link: https://www.figma.com/design/BsgE00bYWTmwm4RY0WmYN6?node-id=459:4487
-// ion/Tabs: Generated with Ion on 11/5/2024, 12:43:47 PM
+// ion/Tabs: Generated with Ion on 11/5/2024, 7:37:20 PM
 import * as TabsPrimitive from "@radix-ui/react-tabs";
 import { cva } from "class-variance-authority";
 import clsx from "clsx";

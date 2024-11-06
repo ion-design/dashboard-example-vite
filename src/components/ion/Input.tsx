@@ -1,6 +1,6 @@
-// Generated with Ion on 11/5/2024, 12:43:53 PM
+// Generated with Ion on 11/5/2024, 7:37:26 PM
 // Figma Link: https://www.figma.com/design/BsgE00bYWTmwm4RY0WmYN6?node-id=430:1834
-// ion/Input: Generated with Ion on 11/5/2024, 12:43:47 PM
+// ion/Input: Generated with Ion on 11/5/2024, 7:37:20 PM
 import clsx from "clsx";
 import React from "react";
 import { twMerge } from "tailwind-merge";
