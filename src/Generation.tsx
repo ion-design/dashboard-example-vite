@@ -1,159 +1,104 @@
-// Generated with Ion on 11/5/2024, 12:43:53 PM
-    // Figma Link: https://www.figma.com/design/BsgE00bYWTmwm4RY0WmYN6?node-id=1:10602
+// Generated with Ion on 11/7/2024, 3:42:37 PM
+    // Figma Link: https://www.figma.com/design/GzGS1XBtO8fnXGsjKDPiIf?node-id=495:5591
     "use client";
-    import {
-      ArrowDown,
-      ArrowUp,
-      CalendarBlank,
-      CaretDown,
-      CurrencyDollar,
-      MagnifyingGlass,
-    } from "@phosphor-icons/react/dist/ssr";
-    import { LineChart } from "@tremor/react";
+    import { EnvelopeSimple, Phone } from "@phosphor-icons/react/dist/ssr";
     import { type MouseEvent, useState } from "react";
 
-    import Badge from "@/components/ion/Badge";
+    import Avatar from "@/components/ion/Avatar";
     import Button from "@/components/ion/Button";
-    import Datepicker from "@/components/ion/Datepicker";
+    import Divider from "@/components/ion/Divider";
     import Input from "@/components/ion/Input";
-    import SideNavigation from "@/components/ion/SideNavigation";
-    import { Tab, Tabs, TabsList } from "@/components/ion/Tabs";
-    import TokenMetric from "@/components/ion/TokenMetric";
+    import Textarea from "@/components/ion/Textarea";
 
-    function DashboardExample() {
-      const [inputValue, setInputValue] = useState("");
+    function ContactInformationCard() {
+      const [address, setAddress] = useState("");
+      const [emailAddress, setEmailAddress] = useState("");
+      const [phoneNumber, setPhoneNumber] = useState("");
 
-      function buyClickHandler(e: MouseEvent<HTMLButtonElement>) {
-        alert("buyClickHandler fired");
+      function applyChangesClickHandler(e: MouseEvent<HTMLButtonElement>) {
+        e.preventDefault();
+        const requestData = {
+          address,
+          emailAddress,
+          phoneNumber,
+        };
+
+        console.log("Sending data to API:", requestData);
+
+        // Simulate an API request
+        setTimeout(() => {
+          console.log("API request successful:", requestData);
+          alert("Changes applied successfully!");
+        }, 1000);
+      }
+
+      function discardClickHandler(e: MouseEvent<HTMLButtonElement>) {
+        alert("discardClickHandler fired");
       }
 
       return (
-        <div className="bg-white w-[1200px] flex">
-          <SideNavigation />
-          <div className="bg-white flex-1 w-full flex flex-col gap-5 p-10">
-            <div className="w-full flex justify-between items-center">
-              <div className="w-fit flex items-center gap-5">
-                <div className="bg-[#1e242e] w-fit flex flex-col justify-center items-center p-2.5 rounded">
-                  <img
-                    src="/images/dashboard-example/Logo-1-10607.svg"
-                    alt="Logo"
-                    className="h-4 w-4"
-                  />
-                </div>
-              </div>
-              <div className="w-fit flex items-center gap-5">
-                <Input
-                  placeholder="Search"
-                  iconLeading={<MagnifyingGlass size={16} weight={"bold"} />}
-                  value={inputValue}
-                  onChange={(e) => setInputValue(e.target.value)}
-                  className="w-[250px]"
-                />
-                <Button
-                  iconLeading={<CurrencyDollar size={16} weight={"bold"} />}
-                  variant="filled"
-                  color="primary"
-                  size="md"
-                  onClick={buyClickHandler}
-                >
-                  Buy
-                </Button>
-              </div>
-            </div>
-            <div className="w-fit flex items-start gap-5">
-              <TokenMetric
-                metric="$1.35b"
-                badge={
-                  <Badge
-                    iconLeading={<ArrowUp size={12} weight={"bold"} />}
-                    variant="soft"
-                    color="green"
-                    size="md"
-                  >
-                    8.23%
-                  </Badge>
-                }
-                title="Volume 24H"
-              />
-              <TokenMetric
-                metric="$4.56"
-                badge={
-                  <Badge
-                    iconLeading={<ArrowDown size={12} weight={"bold"} />}
-                    variant="soft"
-                    color="red"
-                    size="md"
-                  >
-                    4.28%
-                  </Badge>
-                }
-                title="TVL"
-              />
-            </div>
-            <div className="w-full flex flex-col gap-2">
-              <div className="text-lg font-semibold text-[#0b0707]">Overview</div>
-              <div className="bg-white w-full flex flex-col items-center gap-5 p-5 rounded-lg border border-[#d2d7e1]">
-                <div className="w-full flex justify-between items-center">
-                  <div className="w-fit flex flex-col justify-center">
-                    <div className="text-sm text-[#60718f]">TVL</div>
-                    <div className="text-3xl font-semibold text-[#0b0707]">
-                      $2.54b
-                    </div>
-                  </div>
-                  <div className="w-fit flex items-start gap-5">
-                    <Datepicker
-                      iconTrailing={<CaretDown size={16} weight={"bold"} />}
-                      iconLeading={<CalendarBlank size={16} weight={"regular"} />}
-                      className="w-[250px]"
-                    />
-                    <Tabs defaultValue="D">
-                      <TabsList>
-                        <Tab value="D">D</Tab>
-                        <Tab value="W">W</Tab>
-                        <Tab value="M">M</Tab>
-                      </TabsList>
-                    </Tabs>
-                  </div>
-                </div>
-                <LineChart
-                  valueFormatter={(number) =>
-                    `$${Intl.NumberFormat().format(number).toString()}`
-                  }
-                  index={"number"}
-                  data={[
-                    {
-                      number: 1,
-                      Ether: 193,
-                      USDC: 187,
-                    },
-                    {
-                      number: 2,
-                      Ether: 278,
-                      USDC: 222,
-                    },
-                    {
-                      number: 3,
-                      Ether: 322,
-                      USDC: 379,
-                    },
-                    {
-                      number: 4,
-                      Ether: 500,
-                      USDC: 400,
-                    },
-                    {
-                      number: 5,
-                      Ether: 485,
-                      USDC: 480,
-                    },
-                  ]}
-                  categories={["Ether", "USDC"]}
-                  yAxisWidth={48}
-                />
-              </div>
+        <div className="bg-white w-[400px] flex flex-col justify-center items-center gap-5 p-5 rounded-lg shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
+          <div className="w-fit flex flex-col items-center gap-4">
+            <Avatar
+              subtitle="Enter your contact details for communication."
+              title="Contact Information"
+              size="md"
+              topStatus="plus"
+            />
+            <Divider />
+            <Input
+              placeholder="samraaj@ion.design"
+              iconLeading={<EnvelopeSimple size={16} weight={"regular"} />}
+              required
+              label="Email Address"
+              showHintIcon
+              hint="Work email"
+              value={emailAddress}
+              onChange={(e) => setEmailAddress(e.target.value)}
+              className="w-full"
+            />
+            <Input
+              placeholder="samraaj@ion.design"
+              iconLeading={<Phone size={16} weight={"bold"} />}
+              required
+              label="Phone Number"
+              value={phoneNumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
+              className="w-full"
+            />
+            <Textarea
+              placeholder="301 main st"
+              required
+              helper="(Mailing)"
+              label="Address"
+              showHintIcon
+              hint="Needed for HR records"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+              className="w-full"
+            />
+            <div className="w-full flex items-center gap-5">
+              <Button
+                variant="soft"
+                color="neutral"
+                size="md"
+                onClick={discardClickHandler}
+                className="w-full"
+              >
+                Discard
+              </Button>
+              <Button
+                variant="filled"
+                color="primary"
+                size="md"
+                onClick={applyChangesClickHandler}
+                className="w-full"
+              >
+                Apply Changes
+              </Button>
             </div>
           </div>
         </div>
       );
     }
-    export default DashboardExample;
+    export default ContactInformationCard;

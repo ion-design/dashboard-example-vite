@@ -1,6 +1,6 @@
-// Generated with Ion on 11/5/2024, 12:43:53 PM
-// Figma Link: https://www.figma.com/design/BsgE00bYWTmwm4RY0WmYN6?node-id=437:3164
-// ion/Avatar: Generated with Ion on 11/5/2024, 12:43:47 PM
+// Generated with Ion on 11/7/2024, 3:42:37 PM
+// Figma Link: https://www.figma.com/design/GzGS1XBtO8fnXGsjKDPiIf?node-id=437:3164
+// ion/Avatar: Generated with Ion on 11/7/2024, 3:42:37 PM
 import { Check, Plus, User, X } from "@phosphor-icons/react/dist/ssr";
 import * as AvatarPrimitive from "@radix-ui/react-avatar";
 import { cva } from "class-variance-authority";

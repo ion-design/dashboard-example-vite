@@ -1,15 +1,15 @@
+import "@fontsource/inter";
 
-import React, { ReactElement } from 'react'
-import { Routes, Route } from 'react-router-dom';
-import Generation from './Generation';
-
+import React, { ReactElement } from "react";
+import { Routes, Route } from "react-router-dom";
+import GenerationWrapper from "./GenerationWrapper";
 
 function App(): ReactElement {
   return (
-     <Routes>
-        <Route path="/" element={<Generation  />} />
-     </Routes>
-  )
+    <Routes>
+      <Route path="/" element={<GenerationWrapper />} />
+    </Routes>
+  );
 }
 
 export default App;
