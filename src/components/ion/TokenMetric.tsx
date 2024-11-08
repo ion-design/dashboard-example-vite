@@ -1,4 +1,4 @@
-// Generated with Ion on 11/5/2024, 12:43:53 PM
+// Generated with Ion on 11/8/2024, 11:37:50 AM
 // Figma Link: https://www.figma.com/design/BsgE00bYWTmwm4RY0WmYN6?node-id=1:3282
 import clsx from "clsx";
 type TokenMetricProps = {

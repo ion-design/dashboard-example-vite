@@ -1,6 +1,6 @@
-// Generated with Ion on 11/5/2024, 12:43:53 PM
+// Generated with Ion on 11/8/2024, 11:37:50 AM
 // Figma Link: https://www.figma.com/design/BsgE00bYWTmwm4RY0WmYN6?node-id=1:7853
-// ion/DatePicker: Generated with Ion on 11/5/2024, 12:43:47 PM
+// ion/DatePicker: Generated with Ion on 11/8/2024, 11:37:45 AM
 import clsx from "clsx";
 import React, { useEffect, useRef } from "react";
 import { type UseInputOptions, useInput } from "react-day-picker";
