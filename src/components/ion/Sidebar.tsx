@@ -1,4 +1,4 @@
-// ion/Sidebar: Generated with Ion on 11/5/2024, 12:43:47 PM
+// ion/Sidebar: Generated with Ion on 11/8/2024, 11:37:45 AM
 import clsx from "clsx";
 
 export interface SidebarProps {
