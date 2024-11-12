@@ -1,6 +1,6 @@
-// Generated with Ion on 11/5/2024, 12:43:53 PM
+// Generated with Ion on 11/12/2024, 3:39:01 PM
 // Figma Link: https://www.figma.com/design/BsgE00bYWTmwm4RY0WmYN6?node-id=487:8250
-// ion/SideNavigationItem: Generated with Ion on 11/5/2024, 12:43:47 PM
+// ion/SideNavigationItem: Generated with Ion on 11/12/2024, 3:39:00 PM
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
 import { Slot } from "@radix-ui/react-slot";
 import { cva } from "class-variance-authority";
