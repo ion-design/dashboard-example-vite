@@ -1,5 +1,3 @@
-// Generated with Ion on 11/5/2024, 12:43:53 PM
-// Figma Link: https://www.figma.com/design/BsgE00bYWTmwm4RY0WmYN6?node-id=forced_ion/SideNavigation/default_1:10135
 "use client";
 import {
   CaretRight,
@@ -11,6 +9,7 @@ import {
   User,
 } from "@phosphor-icons/react/dist/ssr";
 import { type MouseEvent } from "react";
+import { Link } from "react-router-dom";
 
 import Avatar from "@/components/ion/Avatar";
 import Button from "@/components/ion/Button";
@@ -40,10 +39,12 @@ function SideNavigation() {
               {
                 children: "Dashboard",
                 iconLeading: <House size={14} weight={"fill"} />,
+                to: "/",
               },
               {
                 children: "Buy",
                 iconLeading: <ShoppingCart size={14} weight={"fill"} />,
+                to: "/buy",
               },
               {
                 children: "Sell",
@@ -53,14 +54,15 @@ function SideNavigation() {
                 children: "Swap",
                 iconLeading: <Handshake size={14} weight={"fill"} />,
               },
-            ].map(({ children, iconLeading }, index) => (
+            ].map(({ children, iconLeading, to }, index) => (
               <NavigationMenuItem key={index}>
                 <NavigationMenuLink
+                  asChild
                   className="w-full"
                   iconLeading={iconLeading}
                   iconTrailing={<CaretRight size={16} weight={"bold"} />}
                 >
-                  {children}
+                  <Link to={to}>{children}</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             ))}
